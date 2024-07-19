@@ -8,7 +8,9 @@ import userRoute from "./route/user.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:'https://book-store-frontend-ebon-xi.vercel.app'
+}));
 app.use(express.json());
 
 dotenv.config();
@@ -23,7 +25,7 @@ try {
     //     useNewUrlParser: true,
     //     useUnifiedTopology: true,
     // }
-    
+
 );
     console.log("Connected to mongoDB");
 } catch (error) {
