@@ -9,7 +9,7 @@ import userRoute from "./route/user.route.js";
 const app = express();
 
 app.use(cors({
-    origin:'https://book-store-frontend-ebon-xi.vercel.app'
+    origin:'*'
 }));
 app.use(express.json());
 
